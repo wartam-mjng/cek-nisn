@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Siswa - Penerima PIP</title>
+    <title>Cek Nis/NISN - Penerima PIP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .loader {
@@ -21,7 +21,7 @@
     <div class="max-w-md mx-auto py-12 px-6 flex-grow">
         <!-- Header -->
         <div class="text-center mb-8">
-            <h1 class="text-2xl font-extrabold text-blue-800 mb-1">Data Siswa</h1>
+            <h1 class="text-2xl font-extrabold text-blue-800 mb-1">Data NIS/NISN</h1>
             <h2 class="text-lg font-bold text-gray-700">Penerima Bantuan PIP</h2>
             <div class="h-1 w-16 bg-blue-500 mx-auto rounded-full mt-3"></div>
         </div>
@@ -185,7 +185,7 @@
         namaSelect.addEventListener('change', function() {
             const selectedNama = this.value;
             const selectedKelas = kelasSelect.value;
-            
+            f
             if (selectedNama) {
                 const student = allStudents.find(s => s.nama === selectedNama && s.kelas === selectedKelas);
                 if (student) {
