@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Nis/NISN - Penerima PIP</title>
+    <title>Daftar NIS/NISN - Penerima PIP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .loader {
@@ -128,12 +128,6 @@
         function processData(csvText) {
             const rows = csvText.split(/\r?\n/);
             const classSet = new Set();
-
-            // Berdasarkan instruksi baru:
-            // Kolom A (0) = NIS
-            // Kolom B (1) = Nama
-            // Kolom C (2) = Kelas
-            // Kolom D (3) = NISN
             
             allStudents = rows.slice(1)
                 .filter(r => r.trim() !== '')
@@ -185,7 +179,7 @@
         namaSelect.addEventListener('change', function() {
             const selectedNama = this.value;
             const selectedKelas = kelasSelect.value;
-            f
+            
             if (selectedNama) {
                 const student = allStudents.find(s => s.nama === selectedNama && s.kelas === selectedKelas);
                 if (student) {
